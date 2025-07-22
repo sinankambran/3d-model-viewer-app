@@ -8,7 +8,6 @@ const modelRoutes = require('./routes/modelRoutes');
 const app = express();
 
 const allowedOrigins = [
-  'http://localhost:5173',
    process.env.VITE_CLIENT_URL,
 ];
 
