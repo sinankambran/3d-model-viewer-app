@@ -28,7 +28,7 @@ app.use('/model', express.static(path.join(__dirname, 'uploads')));
 app.use('/', modelRoutes);
 
 mongoose.connect(process.env.MONGO_URI ,{
-  useNewUrlParser: true,
+   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
   .then(() => {
@@ -37,5 +37,3 @@ mongoose.connect(process.env.MONGO_URI ,{
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch(err => console.error('MongoDB connection error:', err));
-
-  module.exports = app;
