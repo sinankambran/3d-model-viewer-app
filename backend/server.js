@@ -24,7 +24,7 @@ origin: function (origin, callback) {
 
 
 app.use(express.json());
-// app.use('/model', express.static(path.join(__dirname, 'uploads')));
+app.use('/model', express.static(path.join(__dirname, 'uploads')));
 app.use('/', modelRoutes);
 
 mongoose.connect(process.env.MONGO_URI ,{
